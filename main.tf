@@ -1,5 +1,8 @@
-resource "aws_vpc" "Main" {                # Creating VPC here
+resource "aws_vpc" "my-vpc" {                # Creating VPC here
    cidr_block       = "10.1.0.0/24"
    instance_tenancy = "default"
-   region = "us-west-1"
+
+   tags = {
+       Name = "minzhi-test"
+   }
  }
